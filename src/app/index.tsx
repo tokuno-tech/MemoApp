@@ -12,30 +12,30 @@ const Index = (): React.JSX.Element => {
 
             <View>
 
-                <View>
+                <View style={styles.memoListItem}>
                     <View>
-                        <Text>買い物リスト</Text>
-                        <Text>2023年10月1日 10:00</Text>
+                        <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+                        <Text style={styles.memoListItemDate}>2023年10月1日 10:00</Text>
                     </View>
                     <View>
                         <Text>X</Text>
                     </View>
                 </View>
 
-                <View>
+                <View style={styles.memoListItem}>
                     <View>
-                        <Text>買い物リスト</Text>
-                        <Text>2023年10月1日 10:00</Text>
+                        <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+                        <Text style={styles.memoListItemDate}>2023年10月1日 10:00</Text>
                     </View>
                     <View>
                         <Text>X</Text>
                     </View>
                 </View>
 
-                <View>
+                <View style={styles.memoListItem}>
                     <View>
-                        <Text>買い物リスト</Text>
-                        <Text>2023年10月1日 10:00</Text>
+                        <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+                        <Text style={styles.memoListItemDate}>2023年10月1日 10:00</Text>
                     </View>
                     <View>
                         <Text>X</Text>
@@ -44,8 +44,8 @@ const Index = (): React.JSX.Element => {
 
             </View>
 
-            <View>
-                <Text>＋</Text>
+            <View style={styles.circleButton}>
+                <Text style={styles.circleButtonLabel}>＋</Text>
             </View>
         </View>
     )
@@ -78,6 +78,49 @@ const styles = StyleSheet.create({
         lineHeight: 32,
         fontWeight: 'bold',
         color: '#fff'
+    },
+    memoListItem: {
+        backgroundColor: '#fff',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 16,
+        paddingHorizontal: 19,
+        alignItems: 'center',
+        borderBottomWidth: 1,
+        borderBottomColor: 'rgba(0, 0, 0, 0.15)'
+    },
+    memoListItemTitle: {
+        fontSize: 16,
+        lineHeight: 32
+    },
+    memoListItemDate: {
+        fontSize: 12,
+        lineHeight: 16,
+        color: '#848484'
+    },
+    circleButton: {
+        width: 64,
+        height: 64,
+        borderRadius: 32,
+        backgroundColor: '#467FD3',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        right: 40,
+        bottom: 40,
+        shadowColor: '#000000',
+        shadowOpacity: 0.25,
+        shadowRadius: 8,
+        shadowOffset: {
+            width: 0,
+            height: 8
+        },
+        elevation: 8 // Androidの影の効果
+    },
+    circleButtonLabel: {
+        color: '#fff',
+        fontSize: 40,
+        lineHeight: 48
     }
 })
 
