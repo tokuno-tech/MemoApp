@@ -1,4 +1,5 @@
 import { View, Text, ScrollView, StyleSheet } from 'react-native'
+import { Feather } from '@expo/vector-icons'
 
 import Header from '../../components/Header'
 import CircleButton from '../../components/CircleButton'
@@ -17,7 +18,9 @@ const Detail = (): React.JSX.Element => {
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                 </Text>
             </ScrollView>
-            <CircleButton style={{ top: 160, bottom: 'auto' }}>＋</CircleButton>
+            <CircleButton style={{ top: 160, bottom: 'auto' }}>
+                <Feather name='edit-3' size={30} />
+            </CircleButton>
         </View>
     )
 }
