@@ -5,13 +5,14 @@ import {
 
 interface Props {
     children: React.JSX.Element
-    style?: ViewStyle
+    style?: ViewStyle,
+    onPress?: () => void
 }
 
 const MemoListItem = (props: Props): React.JSX.Element => {
-    const {children, style} = props
+    const {children, style, onPress} = props
     return (
-        <TouchableOpacity style={[styles.circleButton, style]}>
+        <TouchableOpacity onPress={onPress} style={[styles.circleButton, style]}>
             <Text style={styles.circleButtonLabel}>{ children }</Text>
         </TouchableOpacity>
     )
